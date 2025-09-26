@@ -1,2 +1,19 @@
-# hello-service
-Тестовое задание для Recruto
+# Hello Service
+
+Веб-сервис для тестового задания.
+
+## Использование
+
+Добавьте параметры в URL:
+
+```
+https://ваш-логин.github.io/hello-service/?name=Recruto&message=Давай+дружить
+```
+
+## Локальный запуск с PHP
+
+Если нужен PHP-вариант, скачайте файлы и запустите:
+
+```bash
+php -S localhost:8000
+```
