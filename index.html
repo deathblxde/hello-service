@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .examples {
+            margin-top: 30px;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="greeting">Hello Recruto! Давай дружить!</h1>
+    
+    <div class="examples">
+        <h3>Тестовые ссылки:</h3>
+        <a href="./">Без параметров</a>
+        <a href="./?name=Recruto&message=Давай дружить">С параметрами по заданию</a>
+        <a href="./?name=John&message=Test Message">Свои параметры</a>
+    </div>
+
+    <script>
+        // Функция для обработки параметров URL
+        function updateGreeting() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name') || 'Recruto';
+            const message = urlParams.get('message') || 'Давай дружить';
+            
+            // Декодируем русские символы
+            const decodedName = decodeURIComponent(name);
+            const decodedMessage = decodeURIComponent(message);
+            
+            document.getElementById('greeting').textContent = 
+                `Hello ${decodedName}! ${decodedMessage}!`;
+        }
+
+        // Вызываем при загрузке страницы
+        document.addEventListener('DOMContentLoaded', updateGreeting);
+    </script>
+</body>
+</html>
