@@ -4,15 +4,15 @@
 
 ## Использование
 
-Добавьте параметры в URL:
+URL:
 
 ```
-https://ваш-логин.github.io/hello-service/?name=Recruto&message=Давай+дружить
+https://deathblxde.github.io/hello-service/?name=Recruto&message=Давай+дружить
 ```
 
 ## Локальный запуск с PHP
 
-Если нужен PHP-вариант, скачайте файлы и запустите:
+Скачайте файл index.php и запустите:
 
 ```bash
 php -S localhost:8000
