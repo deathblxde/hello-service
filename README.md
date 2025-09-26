@@ -4,16 +4,14 @@
 
 ## Использование
 
-URL:
-
-```
-https://deathblxde.github.io/hello-service/?name=Recruto&message=Давай+дружить
-```
-
-## Локальный запуск с PHP
-
 Скачайте файл index.php и запустите:
 
 ```bash
 php -S localhost:8000
+```
+
+Далее откройте браузер и перейдите по адресу:
+
+```bash
+http://localhost:8000/?name=Recruto&message=Давай дружить
 ```
